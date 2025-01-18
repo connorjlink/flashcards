@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flashcard App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>HTML Flashcards App</h1>
+        <div class="loading-container">
+            <div id="select-container">
+                <label>Select Deck:
+                    <input type="file" accept=".csv" id="file-selector" onchange="loadDeck()">
+                </label>
+            </div>
+
+            <div id="progress-container" class="hidden">
+                <label>Loading Deck:
+                    <progress id="loading-deck" value="0"></progress>
+                </label>
+            </div>
+        </div>
+        
+        <div class="flashcards-container">
+            <div class="flashcards" id="flashcards"></div>
+            <input type="text" id="answerInput" placeholder="Type your answer here&hellip;">
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</html>
